@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Javascript To Do List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="todo-wrap">
+      <!-- (A) HEADER -->
+      <h1>MY TASKS LIST</h1>
+
+      <!-- (B) ADD NEW ITEM -->
+      <form id="todo-add">
+        <input type="text" id="todo-item" placeholder="New Task" required />
+        <input type="submit" id="todo-save" />
+      </form>
+
+      <!-- (C) DELETE ITEMS -->
+      <div id="todo-del">
+        <input type="button" value="Delete All" id="todo-delall" />
+        <input type="button" value="Delete Completed" id="todo-delcom"/>
+      </div>
+
+      <!-- (D) LIST ITEMS -->
+      <div id="todo-list"></div>
+
+      <!-- (E) MODAL -->
+      <div class="container">
+        <div class="modal" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">System Notice</h5>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure you want to delete all tasks?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary confirm">
+                  Delete All
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary cancel"
+                  data-dismiss="modal"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="solution.js"></script>
+  </body>
+</html>
